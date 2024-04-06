@@ -1,13 +1,12 @@
 from typing import Optional
 from fastapi import FastAPI, Request, Depends
-from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 
 
 from . import models
-from .database import SessionLocal, engine
+from .database import SessionLocal
 
 app = FastAPI()
 

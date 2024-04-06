@@ -1,4 +1,4 @@
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, UUID, DateTime
+from sqlalchemy import Column, ForeignKey, String, UUID, DateTime
 from sqlalchemy.ext.hybrid import hybrid_property
 from sqlalchemy.orm import relationship
 from base64 import urlsafe_b64encode
