@@ -12,8 +12,6 @@ from .database import SessionLocal, engine
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
-
-
 templates = Jinja2Templates(directory="templates")
 
 
@@ -34,6 +32,7 @@ async def notes(
 ):
     notes = (
         db.query(models.Note)
+        .where(models.Note.permission != "private")
         .order_by(models.Note.lastchangeAt.desc())
         .offset(size * page)
         .limit(size)
