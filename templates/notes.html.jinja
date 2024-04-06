@@ -1,0 +1,11 @@
+{% for n in notes %}
+{% if loop.last and loop.index == size %}
+<tr hx-get="/notes?page={{page + 1}}" hx-trigger="revealed" hx-swap="afterend">
+{% else %}
+<tr>
+{% endif %}
+    <td><a href="{{n.url}}">{{n.title}}</a></td>
+    <td>{{n.owner.email}}</td>
+    <td>{{n.lastchangeAt.strftime("%Y-%m-%d %H:%M")}}</td>
+</tr>
+{% endfor %}

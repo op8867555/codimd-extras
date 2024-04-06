@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light dark" />
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <script src="https://unpkg.com/htmx.org@1.9.11"></script>
+        <title>Explore</title>
+    </head>
+    <body>
+        <main class="container">
+            <h1>Explore</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Updated At</th>
+                    </tr>
+                </thead>
+                <tbody hx-get="/notes"
+                       hx-trigger="load">
+                </tbody>
+            </table>
+        </main>
+    </body>
+</html>

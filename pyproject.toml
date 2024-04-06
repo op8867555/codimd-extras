@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "codimd-explorer"
+version = "0.1.0"
+description = ""
+authors = ["Ming-Yang Lu <op8867555@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.110.1"
+Jinja2 = "^3.1.3"
+psycopg2 = "^2.9.9"
+sqlalchemy = "^2.0.29"
+
+[tool.poetry.group.dev.dependencies]
+pylsp-mypy = "^0.6.8"
+uvicorn = "^0.29.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
