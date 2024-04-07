@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "codimd-explorer"
+name = "codimd-extras"
 version = "0.1.0"
 description = ""
 authors = ["Ming-Yang Lu <op8867555@gmail.com>"]
